@@ -1,0 +1,2 @@
+docker build -t mr22085-server-php .
+docker run -d --name mr22085-contenedor-server -p 8080:80 -v .:/var/www/html mr22085-server-php
