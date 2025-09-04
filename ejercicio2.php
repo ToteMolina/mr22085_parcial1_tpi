@@ -19,18 +19,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora de conversión</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form method="POST">
-        <label for="ingresar_temperatura">Ingrese la temperatura: </label>
-        <input type="text" id="ingresar_temperatura" name="ingresar_temperatura">
-        <select name="tipo_conversion" id="tipo_conversion">
-            <option value="1">Celsius a Fahrenheit</option>
-            <option value="2">Fahrenheit a Celsius</option>
-        </select>
+        <div class="inputs">
+            <label for="ingresar_temperatura">Ingrese la temperatura: </label>
+            <input type="text" id="ingresar_temperatura" name="ingresar_temperatura">
+            <select name="tipo_conversion" id="tipo_conversion">
+                <option value="1">Celsius a Fahrenheit</option>
+                <option value="2">Fahrenheit a Celsius</option>
+            </select>
 
-        <button type="submit">Calcular</button>
+            <button type="submit">Calcular</button>
+        </div>
+        
     </form>
     <?php if(isset($resultado)): ?>
         <p>El resultado es: <?= $resultado ?></p>
