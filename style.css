@@ -5,10 +5,30 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgb(144, 144, 251);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultado {
+    color: #fff;
+    font-family: monospace;
+    font-size: 24px;
+    
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+label {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
 }

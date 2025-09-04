@@ -23,21 +23,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
     <form method="POST">
-        <div class="inputs">
-            <label for="ingresar_temperatura">Ingrese la temperatura: </label>
-            <input type="text" id="ingresar_temperatura" name="ingresar_temperatura">
-            <select name="tipo_conversion" id="tipo_conversion">
-                <option value="1">Celsius a Fahrenheit</option>
-                <option value="2">Fahrenheit a Celsius</option>
-            </select>
+            <div class="inputs">
+                <label for="ingresar_temperatura">Ingrese la temperatura: </label>
+                <input type="text" id="ingresar_temperatura" name="ingresar_temperatura">
+                <select name="tipo_conversion" id="tipo_conversion">
+                    <option value="1">Celsius a Fahrenheit</option>
+                    <option value="2">Fahrenheit a Celsius</option>
+                </select>
 
-            <button type="submit">Calcular</button>
-        </div>
-        
-    </form>
-    <?php if(isset($resultado)): ?>
-        <p>El resultado es: <?= $resultado ?></p>
-    <?php endif; ?>
+                <button type="submit">Calcular</button>
+            </div>
+            
+        </form>
+        <?php if(isset($resultado)): ?>
+            <p class="resultado">El resultado es: <?= $resultado ?></p>
+        <?php endif; ?>
+    </div>
 </body>
 </html>
